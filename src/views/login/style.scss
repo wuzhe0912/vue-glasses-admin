@@ -1,0 +1,25 @@
+@import '@/assets/scss/share.scss';
+
+.login__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: to-rem(300px);
+  text-align: center;
+}
+
+.title {
+  font-size: $font-large;
+}
+
+.submit__btn {
+  width: 100%;
+  margin-top: to-rem(22px);
+}
