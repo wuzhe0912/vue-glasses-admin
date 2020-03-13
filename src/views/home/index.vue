@@ -1,24 +1,21 @@
 <template lang="pug">
-  .home__wrap(@click="logout()") logout
+  bodyHeader
 </template>
 
 <script>
+import bodyHeader from '@/components/body-header'
+
 export default {
   name: 'home',
+  components: {
+    bodyHeader
+  },
+
   data () {
     return {
     }
   },
   methods: {
-    logout () {
-      let api = `${this.axios.defaults.baseURL}/logout`
-      this.$http.post(api).then((res) => {
-        this.$message({ message: res.message, type: 'success' })
-        this.$router.push({ name: 'login' })
-      }).catch((err) => {
-        console.log(err)
-      })
-    }
   }
 }
 </script>

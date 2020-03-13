@@ -1,0 +1,68 @@
+@import '@/assets/scss/share.scss';
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: to-rem(60px);
+  padding: to-rem(5px);
+  background: #324057;
+  color: $light;
+  border-bottom: 1px solid #1f2d3d;
+}
+
+.logo__container {
+  display: flex;
+}
+
+.logo {
+  margin-left: to-rem(20px);
+  width: to-rem(45px);
+  height: to-rem(45px);
+  background: url("./images/money.svg") no-repeat;
+  background-size: contain;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-left: to-rem(20px);
+  font-family: "Microsoft YaHei";
+  letter-spacing: to-rem(3px);
+  font-size: $font-large;
+}
+
+.userInfo {
+  display: flex;
+  justify-content: space-around;
+  min-width: to-rem(200px);
+}
+
+.avatar {
+  width: to-rem(45px);
+  height: to-rem(45px);
+  background: url("./images/avatar.svg") no-repeat;
+  background-size: contain;
+}
+
+.name__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: to-rem(24px);
+}
+
+.avatar__name {
+  color: #409eff;
+}
+
+.drop__wrap {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.el-icon-arrow-down {
+  color: $light;
+}

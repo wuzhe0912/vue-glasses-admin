@@ -13,6 +13,7 @@
 
 <script>
 // @ is an alias to /src
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'login',
@@ -40,7 +41,23 @@ export default {
     }
   },
 
+  computed: {
+    ...mapState([
+      'userInfo'
+    ])
+  },
+
+  created () {
+    // 檢查狀態是否為已登入，若為登入狀態則進入 home
+    this.getUserStatus().then(() => {
+      if (this.userInfo.status) this.$router.push({ name: 'home' })
+    })
+  },
+
   methods: {
+    ...mapActions([
+      'getUserStatus'
+    ]),
     submitLogin (val) {
       this.$refs[val].validate(valid => {
         // 檢查有無填入登入資訊
