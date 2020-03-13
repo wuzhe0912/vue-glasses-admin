@@ -12,6 +12,7 @@ export const routes = [
     path: '/home',
     name: 'home',
     component: home,
-    meta: {}
-  }
+    meta: { requireAuth: true }
+  },
+  { path: '*', redirect: { name: 'login' } }
 ]

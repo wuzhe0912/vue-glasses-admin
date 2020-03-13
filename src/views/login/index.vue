@@ -46,7 +46,7 @@ export default {
         // 檢查有無填入登入資訊
         if (valid) {
           this.loading = true
-          let api = `${this.axios.defaults.noTokenBaseURL}/admin/signin`
+          let api = `${this.axios.defaults.baseURL}/admin/signin`
           this.$http.post(api, this.formData).then((res) => {
             if (res.success === true) {
               this.$message({ message: '登入成功', type: 'success' })

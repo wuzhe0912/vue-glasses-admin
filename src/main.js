@@ -11,9 +11,10 @@ import env from './env'
 import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/scss/style.scss'
 
-// axios.defaults.withCredentials = true
-axios.defaults.noTokenBaseURL = env.baseURL
-axios.defaults.hasTokenBaseURL = env.baseURL + env.customURL
+// 前端 axios 啟用附帶 cookie
+axios.defaults.withCredentials = true
+axios.defaults.baseURL = env.baseURL
+axios.defaults.validBaseURL = env.baseURL + env.customURL
 // 超時檢查
 axios.defaults.timeout = 5000
 // API 錯誤攔截
