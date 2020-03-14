@@ -17,9 +17,9 @@ export const routes = [
     meta: { requireAuth: true },
     children: [
       { path: '', component: homeContainer },
-      { path: '/home-container', name: 'home-container', component: homeContainer },
-      { path: '/products', name: 'products', component: products },
-      { path: '/orders', name: 'orders', component: orders }
+      { path: '/home-container', name: 'home-container', component: homeContainer, meta: { requireAuth: true } },
+      { path: '/products', name: 'products', component: products, meta: { requireAuth: true } },
+      { path: '/orders', name: 'orders', component: orders, meta: { requireAuth: true } }
     ]
   },
   { path: '*', redirect: { name: 'login' } }

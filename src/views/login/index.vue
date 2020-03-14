@@ -66,8 +66,8 @@ export default {
           let api = `${this.axios.defaults.baseURL}/admin/signin`
           this.$http.post(api, this.formData).then((res) => {
             if (res.success === true) {
-              this.$message({ message: '登入成功', type: 'success' })
               this.$router.push({ name: 'home-container' })
+              this.$message({ message: '登入成功', type: 'success' })
             } else this.$message.error('登入失敗')
             this.loading = false
           }).catch(() => {
