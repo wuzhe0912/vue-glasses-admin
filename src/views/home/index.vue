@@ -1,14 +1,21 @@
 <template lang="pug">
-  bodyHeader
+  .home__wrap
+    bodyHeader
+    .content
+      navMenu
+      .content__right
+        router-view
 </template>
 
 <script>
 import bodyHeader from '@/components/body-header'
+import navMenu from '@/components/nav-menu'
 
 export default {
   name: 'home',
   components: {
-    bodyHeader
+    bodyHeader,
+    navMenu
   },
 
   data () {

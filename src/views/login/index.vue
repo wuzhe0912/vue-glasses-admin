@@ -50,7 +50,7 @@ export default {
   created () {
     // 檢查狀態是否為已登入，若為登入狀態則進入 home
     this.getUserStatus().then(() => {
-      if (this.userInfo.status) this.$router.push({ name: 'home' })
+      if (this.userInfo.status) this.$router.push({ name: 'home-container' })
     })
   },
 
@@ -67,7 +67,7 @@ export default {
           this.$http.post(api, this.formData).then((res) => {
             if (res.success === true) {
               this.$message({ message: '登入成功', type: 'success' })
-              this.$router.push({ name: 'home' })
+              this.$router.push({ name: 'home-container' })
             } else this.$message.error('登入失敗')
             this.loading = false
           }).catch(() => {

@@ -1,0 +1,12 @@
+@import '@/assets/scss/share.scss';
+
+.home__wrap {
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+}

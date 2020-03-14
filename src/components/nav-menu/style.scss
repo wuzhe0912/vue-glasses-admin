@@ -1,0 +1,14 @@
+@import '@/assets/scss/share.scss';
+
+.menu__page {
+  display: flex;
+  min-width: to-rem(200px);
+}
+
+.menu__list {
+  height: 100%;
+}
+
+.el-menu-item {
+  font-size: $font-big;
+}
