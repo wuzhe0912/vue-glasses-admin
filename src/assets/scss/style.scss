@@ -65,3 +65,20 @@ input {
 .el-dialog__body {
   padding: to-rem(15px) to-rem(20px);
 }
+
+.form__wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.form__title {
+  text-align: right;
+}
+
+.enabled__txt {
+  color: $danger;
+}
+
+.isEnable {
+  color: $primary;
+}

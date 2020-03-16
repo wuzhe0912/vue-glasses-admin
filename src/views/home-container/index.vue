@@ -1,5 +1,5 @@
 <template lang="pug">
-  .wrap home-container
+  .wrap
 </template>
 
 <script>
@@ -7,9 +7,7 @@ export default {
   name: 'home-container',
   components: {},
   data () {
-    return {
-
-    }
+    return {}
   }
 }
 

@@ -36,9 +36,11 @@ export default {
           icon: 'document',
           name: '訂單管理',
           path: 'orders'
-          // children: [
-          //   { path: '', name: '優惠卷' }
-          // ]
+        },
+        {
+          icon: 'setting',
+          name: '優惠卷',
+          path: 'coupon'
         }
       ]
     }

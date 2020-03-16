@@ -1,7 +1,7 @@
 <template lang="pug">
   .login__wrap
     section.container
-      .title CMS
+      .title Login CMS
       el-form(:model="formData" :rules="rules" ref="loginForm")
         el-form-item(label="Email" prop="username")
           el-input(v-model="formData.username" placeholder="請輸入Email")
@@ -9,6 +9,9 @@
           el-input(v-model="formData.password" placeholder="請輸入密碼" type="password")
         el-form-item
           el-button.submit__btn(v-loading="loading" type="primary" @click="submitLogin('loginForm')") 登入
+      .tip
+        span 測試帳號：kimi@qq.com
+        span 測試密碼：kimi123
 </template>
 
 <script>

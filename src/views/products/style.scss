@@ -1,14 +1,5 @@
 @import '@/assets/scss/share.scss';
 
-.products__wrap {
-  width: 100%;
-  height: 100%;
-}
-
-.product__title {
-  text-align: right;
-}
-
 .el-table {
   margin-top: to-rem(20px);
   &::before {
@@ -16,11 +7,4 @@
   }
 }
 
-.enabled__txt {
-  color: $danger;
-}
-
-.isEnable {
-  color: $primary;
-}
 

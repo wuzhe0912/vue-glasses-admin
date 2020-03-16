@@ -2,7 +2,7 @@
   .nav__container
     .logo__container
       .logo
-      .title CMS
+      .title Business CMS
     .userInfo
       .avatar
       .name__wrap

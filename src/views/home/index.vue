@@ -3,7 +3,7 @@
     bodyHeader
     .content
       navMenu
-      .content__right
+      .content__right(:class="{no__padding: $route.name === 'home-container'}")
         router-view
 </template>
 

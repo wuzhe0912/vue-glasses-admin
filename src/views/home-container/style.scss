@@ -1,1 +1,8 @@
 @import '@/assets/scss/share.scss';
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  background: url("./images/container-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}

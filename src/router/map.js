@@ -3,6 +3,7 @@ import home from '@/views/home'
 import homeContainer from '@/views/home-container'
 import products from '@/views/products'
 import orders from '@/views/orders'
+import coupon from '@/views/coupon'
 
 export const routes = [
   {
@@ -19,7 +20,8 @@ export const routes = [
       { path: '', component: homeContainer },
       { path: '/home-container', name: 'home-container', component: homeContainer, meta: { requireAuth: true } },
       { path: '/products', name: 'products', component: products, meta: { requireAuth: true } },
-      { path: '/orders', name: 'orders', component: orders, meta: { requireAuth: true } }
+      { path: '/orders', name: 'orders', component: orders, meta: { requireAuth: true } },
+      { path: '/coupon', name: 'coupon', component: coupon, meta: { requireAuth: true } }
     ]
   },
   { path: '*', redirect: { name: 'login' } }
