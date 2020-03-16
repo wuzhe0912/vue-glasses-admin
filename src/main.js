@@ -25,6 +25,14 @@ axios.interceptors.response.use((response) => {
 
 Vue.config.productionTip = false
 
+// 過濾器
+Vue.filter('currency', (val) => {
+  return parseFloat(val).toFixed(1).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+})
+Vue.filter('dollarSign', (val) => {
+  return `$ ${val}`
+})
+
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
 

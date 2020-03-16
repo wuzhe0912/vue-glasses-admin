@@ -2,7 +2,7 @@
   .dialog__wrap
     //- visible 隱藏或顯示
     el-dialog(
-      title="建立新產品"
+      :title="dialog.title + '產品'"
       :visible.sync="dialog.show"
     )
       .form__wrap
@@ -26,7 +26,6 @@
             el-input(v-model="formData.description" autocomplete="off")
           el-form-item(label="說明內容" prop="content")
             el-input(v-model="formData.content" autocomplete="off")
-          el-form-item(label="上傳圖片")
           el-form-item(label="是否啟用" prop="is_enabled")
             el-select(v-model="formData.is_enabled" placeholder="請選擇是否啟用")
               el-option(label="啟用" :value="1")
@@ -41,13 +40,11 @@ export default {
   name: 'products-dialog',
   props: {
     // 接受父組件傳來的狀態
-    dialog: Object
+    dialog: Object,
+    formData: Object
   },
   data () {
     return {
-      formData: {
-        is_enabled: 1
-      },
       rules: {
         title: [{
           required: true,
@@ -94,10 +91,20 @@ export default {
         if (valid) {
           this.loading = true
           let api = `${this.axios.defaults.validBaseURL}/admin/product`
-          this.$http.post(api, { data: this.formData }).then((res) => {
+          let httpMethod = 'post'
+          let option = this.dialog.option
+          let id = this.formData.id
+          // 檢查是新增 || 編輯
+          if (option === 'edit') {
+            httpMethod = 'put'
+            api = `${this.axios.defaults.validBaseURL}/admin/product/${id}`
+          }
+          this.$http[httpMethod](api, { data: this.formData }).then((res) => {
             this.loading = false
             this.dialog.show = false
-            this.$message({ message: '產品已添加成功', type: 'success' })
+            if (option === 'add') {
+              this.$message({ message: '產品添加成功', type: 'success' })
+            } else this.$message({ message: '產品修改成功', type: 'success' })
             // 傳遞到父組件，並重取一次產品列表
             this.$emit('update')
           }).catch((err) => {

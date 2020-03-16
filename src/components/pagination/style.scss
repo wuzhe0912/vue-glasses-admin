@@ -1,0 +1,35 @@
+@import '@/assets/scss/share.scss';
+
+.pagination {
+  display: flex;
+  margin-top: to-rem(20px);
+}
+
+.page__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: to-rem(10px);
+  width: to-rem(40px);
+  height: to-rem(40px);
+  background: #f4f4f5;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary;
+    color: $light;
+  }
+}
+
+.active {
+  background: $primary;
+  color: $light;
+}
+
+.disabled {
+  cursor: no-drop;
+
+  &:hover {
+    opacity: .5;
+  }
+}
