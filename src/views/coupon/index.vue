@@ -64,7 +64,6 @@ export default {
       this.loading = true
       let api = `${this.axios.defaults.validBaseURL}/admin/coupons?page=${page}`
       this.$http.get(api).then((res) => {
-        console.log(1, res)
         this.couponList = res.coupons
         this.paginationData = res.pagination
         this.loading = false

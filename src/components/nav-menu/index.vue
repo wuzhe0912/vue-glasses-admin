@@ -22,21 +22,21 @@ export default {
   data () {
     return {
       menuList: [
-        {
-          icon: 'location',
-          name: '首頁',
-          path: 'home-container'
-        },
+        // {
+        //   icon: 'location',
+        //   name: '首頁',
+        //   path: 'home-container'
+        // },
         {
           icon: 'menu',
           name: '產品管理',
           path: 'products'
         },
-        {
-          icon: 'document',
-          name: '訂單管理',
-          path: 'orders'
-        },
+        // {
+        //   icon: 'document',
+        //   name: '訂單管理',
+        //   path: 'orders'
+        // },
         {
           icon: 'setting',
           name: '優惠卷',

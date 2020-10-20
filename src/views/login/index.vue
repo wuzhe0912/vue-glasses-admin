@@ -69,7 +69,10 @@ export default {
           let api = `${this.axios.defaults.baseURL}/admin/signin`
           this.$http.post(api, this.formData).then((res) => {
             if (res.success === true) {
-              this.$router.push({ name: 'home-container' })
+              const expired = res.expired
+              const token = res.token
+              document.cookie = `token=${token}; expires=${new Date(expired)}`
+              this.$router.push({ name: 'products' })
               this.$message({ message: '登入成功', type: 'success' })
             } else this.$message.error('登入失敗')
             this.loading = false

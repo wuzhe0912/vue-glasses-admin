@@ -22,8 +22,13 @@ export default {
     return {
     }
   },
-  methods: {
-  }
+
+  created () {
+    const cookieValue = document.cookie.split('; ').find(row => row.startsWith('token')).split('=')[1]
+    this.$http.defaults.headers.common.Authorization = cookieValue
+  },
+
+  methods: {}
 }
 </script>
 

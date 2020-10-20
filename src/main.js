@@ -12,7 +12,6 @@ import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/scss/style.scss'
 
 // 前端 axios 啟用附帶 cookie
-axios.defaults.withCredentials = true
 axios.defaults.baseURL = env.baseURL
 axios.defaults.validBaseURL = env.baseURL + env.customURL
 // 超時檢查
